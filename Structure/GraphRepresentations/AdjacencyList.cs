@@ -12,7 +12,9 @@ public class AdjacencyList (int size): IGraphs {
     public void AddEdge(int fromNode, int toNode, uint weight = 1) {
         if (!HasEdge(fromNode,toNode)) _graphAdjacencyList[fromNode].Add(new Node(toNode, weight));
     }
-    public void DeleteEdge(int fromNode, int toNode) => throw new NotImplementedException();
+
+    public void DeleteEdge(int fromNode, int toNode) => _graphAdjacencyList[fromNode].RemoveAll(x => x.index == toNode);
+    
     
     public NodeTuple GetMin() {
         uint minValue = 1000;

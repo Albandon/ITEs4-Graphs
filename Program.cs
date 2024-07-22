@@ -10,9 +10,10 @@ macierz.AddEdge(1,1,20);
 macierz.AddEdge(2,1,19);
 macierz.AddEdge(3,4);
 macierz.AddEdge(0,1);
+Console.WriteLine($"{macierz}");
 var temp = macierz.GetAdjacent(1);
 Console.WriteLine($"{string.Join("",temp)}");
-//
+
 var graph = new Builder().ConsistentGraphAsList(5, 10);
 Console.WriteLine($"{graph}");
 var ops = new Operations(graph);
